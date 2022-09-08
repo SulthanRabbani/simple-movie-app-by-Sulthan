@@ -4,10 +4,9 @@ import { useState } from "react"
 import Rating from "@mui/material/Rating"
 
 export default function Movie(props) {
-    console.log(process.env.DUPLICATE_API_KEY)
     const apikey = "f2dec8829682e66048a9207eab81e44d"
+    const apikeyy = process.env.REACT_APP_KEY_API_KEY
     const [MovieRating, setMovieRating] = useState(0)
-
     const RateMovie = async () => {
         const res = await axios({
             method: 'post',
